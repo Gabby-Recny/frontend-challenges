@@ -2,6 +2,12 @@
 
 ![Design preview for the Tic Tac Toe coding challenge](./preview.jpg)
 
+## Getting Started
+- Fork this repository
+- In your fork, create a new branch called `october-challenge`
+- Do your work in this branch and create a PR to _your_ master branch
+- Send me the PR link
+
 ## The challenge
 
 Your challenge is to build out this Tic Tac Toe game and get it looking as close to the design as possible. Since it's October, feel free to add additional themes to the board and show off your creativity!
