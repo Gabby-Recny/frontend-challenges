@@ -1,26 +1,28 @@
-import { render } from "@testing-library/react";
 import React, { useState } from "react";
 import Square from "../Square/Square";
 
 const Board = () => {
-    // const [squares, setSquares] = useState([Array(9).fill(null)])
-    const [status, setStatus] = useState('X')
+    const [gameSquares, setGameSquares] = useState([Array(9).fill(null)])
+    const [ xIsNext, setXIsNext ] = useState(true)
+
+    const handleClick = (i) => {
+        const squares = gameSquares.slice();
+        squares[i] = xIsNext ? 'X' : 'O'
+        setGameSquares(squares)
+        setXIsNext(!xIsNext)
+    }
 
     const renderSquare = (i) => {
-        return <Square value={i}/>
+        return <Square 
+                    value={gameSquares[i]}
+                    onClick={() => handleClick(i)}
+                />
     }
-    
-    // const renderSquare = (i) => {
-    //     return <Square 
-    //                 setShape={setSquares(i)}
-    //                 value={squares[i]}
-    //             />
-    // }
     
     return (
         <section className="board">
             <h2>Board</h2>
-            <h3>Next player: {status}</h3>
+            <h3>Next player: {xIsNext ? 'X' : 'O'}</h3>
             <div className="board-row">
                 {renderSquare(0)}
                 {renderSquare(1)}
