@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Square from "../Square/Square";
+import O from '../../assets/icon-o.svg';
+import X from '../../assets/icon-x.svg';
+import oOutline from '../../assets/icon-o-outline.svg';
+import xOutline from '../../assets/icon-x-outline.svg';
 
 const Board = () => {
     const [gameSquares, setGameSquares] = useState([Array(9).fill(null)])
@@ -10,7 +14,7 @@ const Board = () => {
         if (winner) {
             return;
         }
-        gameSquares[selectedSquare] = xIsNext ? 'X' : 'O';
+        gameSquares[selectedSquare] = xIsNext ? <img src={X} alt="X token"/> : <img src={O} alt="O token"/>;
         setXIsNext(!xIsNext)
         calculateWinner(gameSquares)
     }
@@ -44,25 +48,27 @@ const Board = () => {
     }
     
     return (
-        <section className="board">
-            <h3>{!winner && `Next player: ${xIsNext ? 'X' : 'O'}`}</h3>
-            <h3>{winner && `Player ${winner} wins!`}</h3>
-            <div className="board-row">
-                {renderSquare(0)}
-                {renderSquare(1)}
-                {renderSquare(2)}
+        <>
+            <section className="board">
+                <h3>{!winner && `Next player: ${xIsNext ? 'X' : 'O'}`}</h3>
+                <h3>{winner && `Player ${winner} wins!`}</h3>
+                <div className="board-row">
+                    {renderSquare(0)}
+                    {renderSquare(1)}
+                    {renderSquare(2)}
                 </div>
-            <div className="board-row">
-                {renderSquare(3)}
-                {renderSquare(4)}
-                {renderSquare(5)}
-            </div>
-            <div className="board-row">
-                {renderSquare(6)}
-                {renderSquare(7)}
-                {renderSquare(8)}
-            </div>
-        </section>
+                <div className="board-row">
+                    {renderSquare(3)}
+                    {renderSquare(4)}
+                    {renderSquare(5)}
+                </div>
+                <div className="board-row">
+                    {renderSquare(6)}
+                    {renderSquare(7)}
+                    {renderSquare(8)}
+                </div>
+            </section>
+        </>
     )
 }
 
