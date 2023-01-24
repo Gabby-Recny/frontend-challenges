@@ -1,4 +1,5 @@
 import React from "react";
+import '../Square/Square.css'
 
 const Square = ({ value, onClick }) => {
     return (
