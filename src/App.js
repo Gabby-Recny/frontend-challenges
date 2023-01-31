@@ -5,10 +5,9 @@ import Board from './Components/Board/Board';
 const App = () => {
 
 return (
-  <>
-    <h1>Tic-Tac-Toe!</h1>
+  <section className="App">
       <Board />
-  </>
+  </section>
 );
 }
 
