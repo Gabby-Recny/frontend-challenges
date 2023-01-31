@@ -54,14 +54,14 @@ const Board = () => {
             return (
             <>
                 <img src={xOutline} alt="It is X's turn"/>
-                <h4>turn</h4>
+                <p>turn</p>
             </>
             )
         } else {
             return (
             <>
                 <img src={oOutline} alt="It is O's turn"/>
-                <h4>turn</h4>
+                <p>turn</p>
             </>
             )
         }
@@ -78,9 +78,11 @@ const Board = () => {
                     {!winner && renderTurnStatus()}
                     {winner && `Player ${winner} wins!`}
                 </div>
-                <button className="restart-button">
-                    <img className="restart-icon" src={restartIcon} alt="Click here to restart the game. AKA the Help, I'm losing button." />
-                </button>
+                <div className="btn-container">
+                    <button className="restart-button">
+                        <img className="restart-icon" src={restartIcon} alt="Click here to restart the game. AKA the Help, I'm losing button." />
+                    </button>
+                </div>
             </section>
             <section className="board">
                 <div className="board-row">
