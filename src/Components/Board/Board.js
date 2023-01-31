@@ -4,6 +4,8 @@ import O from '../../assets/icon-o.svg';
 import X from '../../assets/icon-x.svg';
 import oOutline from '../../assets/icon-o-outline.svg';
 import xOutline from '../../assets/icon-x-outline.svg';
+import restartIcon from '../../assets/icon-restart.svg';
+import './Board.css';
 
 const Board = () => {
     const [gameSquares, setGameSquares] = useState([Array(9).fill(null)])
@@ -46,12 +48,41 @@ const Board = () => {
             } 
         }
     }
+
+    const renderTurnStatus = () => {
+        if (xIsNext) {
+            return (
+            <>
+                <img src={xOutline} alt="It is X's turn"/>
+                <h4>turn</h4>
+            </>
+            )
+        } else {
+            return (
+            <>
+                <img src={oOutline} alt="It is O's turn"/>
+                <h4>turn</h4>
+            </>
+            )
+        }
+    }
     
     return (
-        <>
+        <main className="game-board">          
+            <section className="board-header">
+                <div className="icons">
+                    <img src={X} alt="X token"/>
+                    <img src={O} alt="O token"/>
+                </div>
+                <div className="status">
+                    {!winner && renderTurnStatus()}
+                    {winner && `Player ${winner} wins!`}
+                </div>
+                <button className="restart-button">
+                    <img className="restart-icon" src={restartIcon} alt="Click here to restart the game. AKA the Help, I'm losing button." />
+                </button>
+            </section>
             <section className="board">
-                <h3>{!winner && `Next player: ${xIsNext ? 'X' : 'O'}`}</h3>
-                <h3>{winner && `Player ${winner} wins!`}</h3>
                 <div className="board-row">
                     {renderSquare(0)}
                     {renderSquare(1)}
@@ -68,7 +99,7 @@ const Board = () => {
                     {renderSquare(8)}
                 </div>
             </section>
-        </>
+        </main>
     )
 }
 

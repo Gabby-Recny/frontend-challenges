@@ -1,0 +1,54 @@
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    margin: 15px 0;
+}
+
+.icons > img {
+    height: 30px;
+}
+
+.restart-button {
+    background-color: #A8BFC9;
+    padding: 1.5%;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    box-shadow: 0px 4px 2px 0px #627178;
+
+}
+
+.restart-icon {
+    width: 50%;
+}
+
+.status {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1F3540;
+    border: none;
+    width: 100px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 8px 5px 1px #0f1d23;
+    -moz-box-shadow: 0px 8px 5px 1px #0b1519;
+    box-shadow: 0px 8px 5px 1px #0b1519;
+}
+
+.status > img {
+    width: 20%;
+    height: 20%;
+}
+
+.status > h4 {
+    text-transform: uppercase;
+    color: #A8BFC9;
+}
+
+.game-board {
+    width: 50%;
+    margin: auto;
+}
