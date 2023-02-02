@@ -8,23 +8,26 @@ import restartIcon from '../../assets/icon-restart.svg';
 import './Board.css';
 
 const Board = () => {
-    const [gameSquares, setGameSquares] = useState([Array(9).fill(null)])
+    const [gameBoard, setGameBoard] = useState([Array(9).fill(null)])
     const [ xIsNext, setXIsNext ] = useState(true);
     const [ winner, setWinner ] = useState('');
 
     const handleClick = (selectedSquare) => {
+        const squares = gameBoard.slice();
         if (winner) {
             return;
         }
-        gameSquares[selectedSquare] = xIsNext ? <img src={X} alt="X token"/> : <img src={O} alt="O token"/>;
+
+        squares[selectedSquare] = xIsNext ? 'X' : 'O';
         setXIsNext(!xIsNext)
-        calculateWinner(gameSquares)
+        calculateWinner(squares)
+        setGameBoard(squares)
     }
 
-    const renderSquare = (i) => {
+    const renderSquare = (selectedSquare) => {
         return <Square 
-            value={gameSquares[i]}
-            onClick={() => handleClick(i)}
+            value={gameBoard[selectedSquare]}
+            onClick={() => handleClick(selectedSquare)}
         />
     }
     
@@ -42,11 +45,13 @@ const Board = () => {
         
         for (let i = 0; i < winningLines.length; i++) {
             const [a,b,c] = winningLines[i];
-            
             if (playedSquares[a] && playedSquares[a] === playedSquares[b] && playedSquares[a] === playedSquares[c]) {
+                console.log('Inside the if in calculate winner')
                 setWinner(playedSquares[a])
+                return playedSquares[a]
             } 
         }
+        return null;
     }
 
     const renderTurnStatus = () => {
@@ -76,7 +81,7 @@ const Board = () => {
                 </div>
                 <div className="status">
                     {!winner && renderTurnStatus()}
-                    {winner && `Player ${winner} wins!`}
+                    {winner && <p>Player {winner} wins!</p>}
                 </div>
                 <div className="btn-container">
                     <button className="restart-button">
