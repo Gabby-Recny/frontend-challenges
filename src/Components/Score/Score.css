@@ -1,0 +1,38 @@
+.score {
+    background-color: #1F3540;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.score > p {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.x-score {
+    background-color: #31C3BF;
+}
+
+.ties {
+    background-color: #A7BFC9;
+}
+
+.o-score {
+    background-color: #F1B138;
+}
+
+.score-container {
+        margin: 1% auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        width: 310px;
+}
