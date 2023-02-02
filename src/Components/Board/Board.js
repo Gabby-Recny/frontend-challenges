@@ -43,7 +43,6 @@ const Board = () => {
         for (let i = 0; i < winningLines.length; i++) {
             const [a,b,c] = winningLines[i];
             if (playedSquares[a] && playedSquares[a] === playedSquares[b] && playedSquares[a] === playedSquares[c]) {
-                console.log('Inside the if in calculate winner')
                 setWinner(playedSquares[a])
                 return playedSquares[a]
             } 
