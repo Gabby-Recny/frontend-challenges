@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Square from "../Square/Square";
-import oOutline from '../../assets/icon-o-outline.svg';
-import xOutline from '../../assets/icon-x-outline.svg';
 import './Board.css';
 import '../BoardHeader/BoardHeader';
 import BoardHeader from "../BoardHeader/BoardHeader";
@@ -52,28 +50,10 @@ const Board = () => {
         }
         return null;
     }
-
-    const renderTurnStatus = () => {
-        if (xIsNext) {
-            return (
-            <>
-                <img src={xOutline} alt="It is X's turn"/>
-                <p>turn</p>
-            </>
-            )
-        } else {
-            return (
-            <>
-                <img src={oOutline} alt="It is O's turn"/>
-                <p>turn</p>
-            </>
-            )
-        }
-    }
     
     return (
         <main className="game-board">
-            <BoardHeader renderTurnStatus={renderTurnStatus} winner={winner}/>          
+            <BoardHeader xIsNext={xIsNext} winner={winner}/>          
             <section className="board">
                 <div className="board-row">
                     {renderSquare(0)}

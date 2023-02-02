@@ -3,9 +3,29 @@ import './BoardHeader.css';
 import O from '../../assets/icon-o.svg';
 import X from '../../assets/icon-x.svg';
 import restartIcon from '../../assets/icon-restart.svg';
+import oOutline from '../../assets/icon-o-outline.svg';
+import xOutline from '../../assets/icon-x-outline.svg';
 
 
-const BoardHeader = ({ renderTurnStatus, winner }) => {
+const BoardHeader = ({ xIsNext, winner }) => {
+        const renderTurnStatus = () => {
+        if (xIsNext) {
+            return (
+            <>
+                <img src={xOutline} alt="It is X's turn"/>
+                <p>turn</p>
+            </>
+            )
+        } else {
+            return (
+            <>
+                <img src={oOutline} alt="It is O's turn"/>
+                <p>turn</p>
+            </>
+            )
+        }
+    }
+
     return (
         <section className="board-header">
                 <div className="icons">
