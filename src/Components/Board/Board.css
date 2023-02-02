@@ -35,27 +35,3 @@
     justify-content: flex-end;
     align-items: center;
 }
-
-.status {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #1F3540;
-    border: none;
-    width: 100px;
-    border-radius: 8px;
-    -webkit-box-shadow: 0px 8px 5px 1px #0f1d23;
-    -moz-box-shadow: 0px 8px 5px 1px #0b1519;
-    box-shadow: 0px 8px 5px 1px #0b1519;
-    height: 40px;
-}
-
-.status > img {
-    width: 15%;
-    height: auto;
-}
-
-.status > p {
-    text-transform: uppercase;
-    color: #A8BFC9;
-}

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Square from "../Square/Square";
-import O from '../../assets/icon-o.svg';
-import X from '../../assets/icon-x.svg';
 import oOutline from '../../assets/icon-o-outline.svg';
 import xOutline from '../../assets/icon-x-outline.svg';
-import restartIcon from '../../assets/icon-restart.svg';
 import './Board.css';
+import '../BoardHeader/BoardHeader';
+import BoardHeader from "../BoardHeader/BoardHeader";
 
 const Board = () => {
     const [gameBoard, setGameBoard] = useState([Array(9).fill(null)])
@@ -73,22 +72,8 @@ const Board = () => {
     }
     
     return (
-        <main className="game-board">          
-            <section className="board-header">
-                <div className="icons">
-                    <img src={X} alt="X token"/>
-                    <img src={O} alt="O token"/>
-                </div>
-                <div className="status">
-                    {!winner && renderTurnStatus()}
-                    {winner && <p>Player {winner} wins!</p>}
-                </div>
-                <div className="btn-container">
-                    <button className="restart-button">
-                        <img className="restart-icon" src={restartIcon} alt="Click here to restart the game. AKA the Help, I'm losing button." />
-                    </button>
-                </div>
-            </section>
+        <main className="game-board">
+            <BoardHeader renderTurnStatus={renderTurnStatus} winner={winner}/>          
             <section className="board">
                 <div className="board-row">
                     {renderSquare(0)}
