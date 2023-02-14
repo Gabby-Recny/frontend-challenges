@@ -12,12 +12,12 @@
     height: 40px;
 }
 
-.status>img {
+.status > img {
     width: 15%;
     height: auto;
 }
 
-.status>p {
+.status > p {
     text-transform: uppercase;
     color: #A8BFC9;
 }

@@ -8,6 +8,7 @@ import xOutline from '../../assets/icon-x-outline.svg';
 
 
 const BoardHeader = ({ xIsNext, winner }) => {
+
         const renderTurnStatus = () => {
         if (xIsNext) {
             return (
