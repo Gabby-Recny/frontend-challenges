@@ -3,11 +3,13 @@ import Square from "../Square/Square";
 import './Board.css';
 import '../BoardHeader/BoardHeader';
 import BoardHeader from "../BoardHeader/BoardHeader";
+import Score from '../Score/Score';
 
 const Board = () => {
     const [gameBoard, setGameBoard] = useState([Array(9).fill(null)])
     const [ xIsNext, setXIsNext ] = useState(true);
     const [ winner, setWinner ] = useState('');
+    let isEverySquareEmpty = gameBoard.every(square => square === null);
 
     const handleClick = (selectedSquare) => {
         const squares = gameBoard.slice();
@@ -27,7 +29,7 @@ const Board = () => {
             onClick={() => handleClick(selectedSquare)}
         />
     }
-    
+
     const calculateWinner = (playedSquares) => {
         const winningLines = [
             [0, 1, 2],
@@ -49,10 +51,11 @@ const Board = () => {
         }
         return null;
     }
-    
-    return (
-        <main className="game-board">
-            <BoardHeader xIsNext={xIsNext} winner={winner}/>          
+
+        
+        return (
+            <main className="game-board">
+            <BoardHeader xIsNext={xIsNext} winner={winner} />          
             <section className="board">
                 <div className="board-row">
                     {renderSquare(0)}
@@ -70,6 +73,7 @@ const Board = () => {
                     {renderSquare(8)}
                 </div>
             </section>
+            <Score winner={winner}  isEverySquareEmpty={isEverySquareEmpty}/>
         </main>
     )
 }
