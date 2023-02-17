@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './BoardHeader.css';
 import O from '../../assets/icon-o.svg';
 import X from '../../assets/icon-x.svg';
 import restartIcon from '../../assets/icon-restart.svg';
 import oOutline from '../../assets/icon-o-outline.svg';
 import xOutline from '../../assets/icon-x-outline.svg';
+import RestartGameModal from '../RestartGameModal/RestartGameModal';
 
 
 const BoardHeader = ({ xIsNext, winner, clearGameBoard }) => {
+    const [ isModalOpen, setIsModalOpen ] = useState(false);
 
     const renderTurnStatus = () => {
         if (xIsNext) {
@@ -40,11 +42,16 @@ const BoardHeader = ({ xIsNext, winner, clearGameBoard }) => {
                 <div className="btn-container">
                     <button 
                         className="restart-button"
-                        onClick={clearGameBoard}
+                        onClick={() => setIsModalOpen(true)}
                     >
                         <img className="restart-icon" src={restartIcon} alt="Click here to restart the game. AKA the Help, I'm losing button." />
                     </button>
                 </div>
+                <RestartGameModal 
+                    isModalOpen={isModalOpen}
+                    closeModal={() => setIsModalOpen(false)}
+                    clearGameBoard={clearGameBoard}
+                />
         </section>
     )
 }
