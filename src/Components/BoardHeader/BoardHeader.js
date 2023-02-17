@@ -7,9 +7,9 @@ import oOutline from '../../assets/icon-o-outline.svg';
 import xOutline from '../../assets/icon-x-outline.svg';
 
 
-const BoardHeader = ({ xIsNext, winner }) => {
+const BoardHeader = ({ xIsNext, winner, restartGame }) => {
 
-        const renderTurnStatus = () => {
+    const renderTurnStatus = () => {
         if (xIsNext) {
             return (
             <>
@@ -38,7 +38,10 @@ const BoardHeader = ({ xIsNext, winner }) => {
                     {winner && <p>Player {winner} wins!</p>}
                 </div>
                 <div className="btn-container">
-                    <button className="restart-button">
+                    <button 
+                        className="restart-button"
+                        onClick={restartGame}
+                    >
                         <img className="restart-icon" src={restartIcon} alt="Click here to restart the game. AKA the Help, I'm losing button." />
                     </button>
                 </div>

@@ -9,7 +9,7 @@ const Board = () => {
     const [gameBoard, setGameBoard] = useState([Array(9).fill(null)])
     const [ xIsNext, setXIsNext ] = useState(true);
     const [ winner, setWinner ] = useState('');
-    let isEverySquareEmpty = gameBoard.every(square => square === null);
+    let [ isEverySquareEmpty, setIsEverySquareEmpty ] = useState(true);
 
     const handleClick = (selectedSquare) => {
         const squares = gameBoard.slice();
@@ -17,6 +17,7 @@ const Board = () => {
             return;
         }
 
+        setIsEverySquareEmpty(false);
         squares[selectedSquare] = xIsNext ? 'X' : 'O';
         setXIsNext(!xIsNext)
         calculateWinner(squares)
@@ -52,10 +53,14 @@ const Board = () => {
         return null;
     }
 
+    const restartGame = () => {
+        setGameBoard([Array(9).fill(null)]);
+    }
+
         
         return (
             <main className="game-board">
-            <BoardHeader xIsNext={xIsNext} winner={winner} />          
+            <BoardHeader xIsNext={xIsNext} winner={winner} restartGame={restartGame}/>          
             <section className="board">
                 <div className="board-row">
                     {renderSquare(0)}
