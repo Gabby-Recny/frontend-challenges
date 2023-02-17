@@ -59,8 +59,12 @@ const Board = () => {
 
         
         return (
-            <main className="game-board">
-            <BoardHeader xIsNext={xIsNext} winner={winner} clearGameBoard={clearGameBoard}/>          
+        <main className="game-board">
+            <BoardHeader 
+                xIsNext={xIsNext} 
+                winner={winner} 
+                clearGameBoard={clearGameBoard}
+            />          
             <section className="board">
                 <div className="board-row">
                     {renderSquare(0)}
