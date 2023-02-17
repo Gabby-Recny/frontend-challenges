@@ -53,14 +53,14 @@ const Board = () => {
         return null;
     }
 
-    const restartGame = () => {
+    const clearGameBoard = () => {
         setGameBoard([Array(9).fill(null)]);
     }
 
         
         return (
             <main className="game-board">
-            <BoardHeader xIsNext={xIsNext} winner={winner} restartGame={restartGame}/>          
+            <BoardHeader xIsNext={xIsNext} winner={winner} clearGameBoard={clearGameBoard}/>          
             <section className="board">
                 <div className="board-row">
                     {renderSquare(0)}
