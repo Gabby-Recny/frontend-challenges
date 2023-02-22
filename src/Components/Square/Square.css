@@ -5,7 +5,7 @@
     height: 100px;
     margin: 5px;
     border-radius: 15px;
-    -webkit-box-shadow: 0px 8px 5px 1px #0f1d23;
-    -moz-box-shadow: 0px 8px 5px 1px #0b1519;
-    box-shadow: 0px 8px 5px 1px #0b1519;
+    -webkit-box-shadow: 0px 8px 0px 0px #0f1d23;
+    -moz-box-shadow: 0px 8px 0px 0px #0b1519;
+    box-shadow: 0px 8px 0px 0px #0b1519;
 }
