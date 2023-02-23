@@ -42,6 +42,12 @@ h3 {
     margin: 10px auto;
     border-radius: 8px;
     font-weight: bolder;
+    transition: all .2s ease-in-out;
+}
+
+.restart-game-modal-btn-container > button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .restart-game-modal-btn-container {

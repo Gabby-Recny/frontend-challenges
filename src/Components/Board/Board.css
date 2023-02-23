@@ -26,6 +26,11 @@
     box-shadow: 0px 5px 0px 0px #627178;
 }
 
+.restart-button:hover {
+    animation: shake-lr .8s cubic-bezier(.455, .03, .515, .955) infinite both;
+    cursor: pointer;
+}
+
 .restart-icon {
     width: 50%;
 }
