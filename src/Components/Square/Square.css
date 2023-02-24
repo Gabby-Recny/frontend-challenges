@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+.game-token {
+    width: 85%;
+}
+
 @media (max-width: 768px) {
     .square {
         width: 85px;

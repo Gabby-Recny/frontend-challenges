@@ -7,11 +7,11 @@ const Square = ({ value, onClick }) => {
     const renderToken = () => {
         if (value === 'X') {
             return (
-                <img src={X} alt="X token"/>
+                <img className="game-token" src={X} alt="X token"/>
             )
         } else if (value === 'O') {
             return (
-                <img src={O} alt="O token"/>
+                <img className="game-token" src={O} alt="O token"/>
             )
         } else {
             return null;
