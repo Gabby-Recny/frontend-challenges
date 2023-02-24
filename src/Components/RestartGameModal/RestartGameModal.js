@@ -19,7 +19,6 @@ const RestartGameModal = ({isModalOpen, closeModal, clearGameBoard}) => {
             <div className="restart-game-modal-icons">
                     <img src={xIcon} alt="X token"/>
                     <img src={oIcon} alt="O token"/>
-
             </div>
             <h3>Would you like to restart the game?</h3>
             <div className="restart-game-modal-btn-container">

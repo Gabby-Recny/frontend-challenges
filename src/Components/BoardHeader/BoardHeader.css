@@ -80,3 +80,30 @@
         height: 35px;
     }
 }
+
+@media only screen and (min-width: 992px) {
+    .board-header {
+        width: 500px;
+    }
+
+    .icons > img {
+        width: 28%;
+        height: auto;
+    }
+
+    .restart-button {
+        padding: 1.5%;
+        width: 52px;
+        height: 52px;
+        box-shadow: 0px 5px 0px 0px #627178;
+    }
+
+    .status {
+        width: 160px;
+        height: 47px;
+    }
+
+    .status > p {
+        font-size: x-large;    
+    }
+}

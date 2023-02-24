@@ -63,3 +63,24 @@ h3 {
         height: 45px;
     }
 }
+
+@media only screen and (min-width: 992px) {
+    .restart-game-modal-icons>img {
+        width: 25%;
+    }
+
+    h3 {
+        font-size: x-large;
+    }
+
+    .restart-game-modal-btn-container>button {
+        width: 235px;
+        height: 57px;
+        font-size: medium;
+    }
+
+    .restart-game-modal-container {
+        width: 55%;
+    }
+
+}
