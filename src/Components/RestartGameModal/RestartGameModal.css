@@ -19,6 +19,7 @@
 
 h3 {
     color: #A8BFC9;
+    padding: 0 12px;
 }
 
 .restart-game-modal-btn-container > button:last-child {
@@ -29,13 +30,6 @@ h3 {
 }
 
 .restart-game-modal-btn-container > button {
-    background-color: #F2B137;
-    -webkit-box-shadow: 0px 8px 0px 0px #986f21; 
-    -moz-box-shadow: 0px 8px 0px 0px #986f21;
-    box-shadow: 0px 8px 0px 0px #986f21;
-}
-
-.restart-game-modal-btn-container > button {
     border: none;
     width: 200px;
     height: 50px;
@@ -43,6 +37,10 @@ h3 {
     border-radius: 8px;
     font-weight: bolder;
     transition: all .2s ease-in-out;
+    background-color: #F2B137;
+    -webkit-box-shadow: 0px 8px 0px 0px #986f21;
+    -moz-box-shadow: 0px 8px 0px 0px #986f21;
+    box-shadow: 0px 8px 0px 0px #986f21;
 }
 
 .restart-game-modal-btn-container > button:hover {
@@ -54,4 +52,14 @@ h3 {
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .restart-game-modal-container {
+        height: 43vh;
+    }
+    .restart-game-modal-btn-container > button {
+        width: 180px;
+        height: 45px;
+    }
 }

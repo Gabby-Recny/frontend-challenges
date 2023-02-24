@@ -36,3 +36,17 @@
         grid-gap: 5px;
         width: 310px;
 }
+
+@media (max-width: 768px) {
+    .score {
+        width: 85px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .score-container {
+        width: 270px;
+        grid-gap: 9px;
+        margin: 2% auto;
+    }
+}

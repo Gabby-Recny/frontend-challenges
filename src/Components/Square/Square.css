@@ -14,3 +14,10 @@
     animation: pulsate-bwd .5s ease-in-out infinite both;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .square {
+        width: 85px;
+        height: 85px;
+    }
+}
