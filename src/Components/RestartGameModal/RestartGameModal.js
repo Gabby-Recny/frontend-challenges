@@ -4,15 +4,16 @@ import xIcon from '../../assets/icon-x.svg';
 import oIcon from '../../assets/icon-o.svg';
 
 
-const RestartGameModal = ({isModalOpen, closeModal, clearBoard}) => {
+const RestartGameModal = ({isModalOpen, closeModal, restartGame}) => {
     if (!isModalOpen) {
         return null;
     }
 
-    const restartGame = () => {
+    const handleClick = () => {
+        restartGame()
         closeModal()
-        clearBoard()
     }
+
 
     return (
         <section className="restart-game-modal-container">
@@ -22,7 +23,7 @@ const RestartGameModal = ({isModalOpen, closeModal, clearBoard}) => {
             </div>
             <h3>Would you like to restart the game?</h3>
             <div className="restart-game-modal-btn-container">
-                <button onClick={() => restartGame()}>Start New Game</button>
+                <button onClick={() => handleClick()}>Start New Game</button>
                 <button onClick={() => closeModal()}>Continue Playing</button>
             </div>
         </section>

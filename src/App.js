@@ -48,8 +48,9 @@ const App = () => {
         return null;
     }
 
-    const clearBoard = () => {
+    const restartGame = () => {
       setBoard(Array(9).fill(null))
+      setWinner('');
     }
   
 
@@ -58,7 +59,7 @@ const App = () => {
         <BoardHeader 
           xIsNext={xIsNext} 
           winner={winner}
-          clearBoard={clearBoard}
+          restartGame={restartGame}
         />
         <Board 
           handleClick={handleClick} 
