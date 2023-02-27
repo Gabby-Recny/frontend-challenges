@@ -29,6 +29,14 @@ const BoardHeader = ({ xIsNext, winner, restartGame }) => {
         }
     }
 
+    const renderWinnerStatus = () => {
+        if (winner === "Draw") {
+            return (<p>Draw</p>)
+        } else {
+            return (<p>Player {winner}  wins!</p>)
+        }
+    }
+
     return (
         <section className="board-header">
                 <div className="icons">
@@ -37,7 +45,7 @@ const BoardHeader = ({ xIsNext, winner, restartGame }) => {
                 </div>
                 <div className="status">
                     {!winner && renderTurnStatus()}
-                    {winner && <p>Player {winner} wins!</p>}
+                    {winner && renderWinnerStatus()}
                 </div>
                 <div className="btn-container">
                     <button 

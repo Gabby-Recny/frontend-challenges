@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Score.css';
 
-const Score = ({winner, isEverySquareEmpty}) => {
+const Score = ({winner}) => {
     useEffect(() => {
         updateScores();
     }, [winner]);
@@ -12,39 +12,56 @@ const Score = ({winner, isEverySquareEmpty}) => {
          tiedScore: 0
         });
 
-        const updateScores = () => {
+    const updateScores = () => {
         if (winner === 'X') {
-            // console.log('X won')
-            let {xScore} = scores;
+            let { xScore } = scores;
             xScore++;
-            setScores({...scores, xScore})
-            
+            setScores({...scores, xScore});
+            console.log('Updated X Score', scores)
+            // saveScoresToLocalStorage(scores);
         } else if (winner === 'O') {
-            // console.log('O won')
-            let {oScore} = scores;
+            let { oScore } = scores;
             oScore++;
-            setScores({...scores, oScore})
-        } else if (isEverySquareEmpty && !winner) {
-            // console.log('Tie won')
-            let {tiedScore} = scores;
+                        console.log('Updated O Score', scores)
+
+            setScores({...scores, oScore});
+            // saveScoresToLocalStorage(scores.oScore);
+        } else if (winner === "Draw") {
+            let { tiedScore } = scores;
             tiedScore++;
+            console.log('Updated Tied Score', scores)
             setScores({...scores, tiedScore});
-        }
+            // saveScoresToLocalStorage(scores.tiedScore);
+        } 
     }
+
+    // const saveScoresToLocalStorage = (newScore) => {
+    //     console.log('New Score in Local Storage', newScore)
+    //     const stringifiedScores = JSON.stringify(newScore);
+    //     window.localStorage.setItem(`Scores`, stringifiedScores);
+    // }
+
+    // const retriveScoresFromLocalStorage = () => {
+    //     let storedScores = window.localStorage.getItem(`Scores`);
+    //     // console.log('Stored Scores', storedScores)
+    //     const parsedScores = JSON.parse(storedScores);
+    //     // console.log('Parsed scores', parsedScores)
+    //     // return parsedScores;
+    // }
 
     return (
         <section className="score-container">
             <div className="score x-score">
                 <p>You</p>
-                <p>{scores.xScore}</p>
+                {/* <p>{retriveScoresFromLocalStorage()}</p> */}
             </div>
             <div className="score ties">
                 <p>Ties</p>
-                <p>{scores.tiedScore}</p>
+                {/* <p>{retriveScoresFromLocalStorage()}</p> */}
             </div>
             <div className="score o-score">
                 <p>O</p>
-                <p>{scores.oScore}</p>
+                {/* <p>{retriveScoresFromLocalStorage()}</p> */}
             </div>
         </section>
     )

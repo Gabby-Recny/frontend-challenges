@@ -9,6 +9,7 @@ const App = () => {
     const [board, setBoard] = useState(Array(9).fill(null))
     const [ xIsNext, setXIsNext ] = useState(true);
     const [ winner, setWinner ] = useState('');
+
     const winningConditions = [
             [0, 1, 2],
             [3, 4, 5],
@@ -43,7 +44,9 @@ const App = () => {
             if (playedSquares[a] && playedSquares[a] === playedSquares[b] && playedSquares[a] === playedSquares[c]) {
                 setWinner(playedSquares[a])
                 return playedSquares[a]
-            } 
+            } else if (!board.includes(null)) {
+              setWinner("Draw")
+            }
         }
         return null;
     }
@@ -65,7 +68,9 @@ const App = () => {
           handleClick={handleClick} 
           board={board}
         />
-        <Score winner={winner}/>
+        <Score 
+          winner={winner}
+        />
       </section>
     );
 }
