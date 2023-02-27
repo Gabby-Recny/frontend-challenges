@@ -4,14 +4,14 @@ import xIcon from '../../assets/icon-x.svg';
 import oIcon from '../../assets/icon-o.svg';
 
 
-const RestartGameModal = ({isModalOpen, closeModal, clearGameBoard}) => {
+const RestartGameModal = ({isModalOpen, closeModal, clearBoard}) => {
     if (!isModalOpen) {
         return null;
     }
 
     const restartGame = () => {
         closeModal()
-        clearGameBoard()
+        clearBoard()
     }
 
     return (

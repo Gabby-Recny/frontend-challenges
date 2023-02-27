@@ -8,7 +8,7 @@ import xOutline from '../../assets/icon-x-outline.svg';
 import RestartGameModal from '../RestartGameModal/RestartGameModal';
 
 
-const BoardHeader = ({ xIsNext, winner, clearGameBoard }) => {
+const BoardHeader = ({ xIsNext, winner, clearBoard }) => {
     const [ isModalOpen, setIsModalOpen ] = useState(false);
 
     const renderTurnStatus = () => {
@@ -50,7 +50,7 @@ const BoardHeader = ({ xIsNext, winner, clearGameBoard }) => {
                 <RestartGameModal 
                     isModalOpen={isModalOpen}
                     closeModal={() => setIsModalOpen(false)}
-                    clearGameBoard={clearGameBoard}
+                    clearBoard={clearBoard}
                 />
         </section>
     )
