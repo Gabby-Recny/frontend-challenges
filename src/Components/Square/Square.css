@@ -32,3 +32,11 @@
         height: 160px;
     }
 }
+
+/* For tablet height */
+@media (min-height: 1024px) {
+    .square {
+            width: 160px;
+            height: 160px;
+        }
+}
