@@ -18,6 +18,11 @@
     font-size: small;
 }
 
+.score > p:nth-child(odd) {
+    font-weight: 400;
+    font-size: x-small;
+}
+
 .x-score {
     background-color: #31C3BF;
 }
@@ -40,10 +45,10 @@
 
 @media (max-width: 768px) {
     .score {
-        padding: 1% 0;
+        padding: 7% 0;
         border-radius: 10px;
     }
-    .score>p {
+    .score > p {
         font-size: small;
     }
 }
@@ -55,6 +60,10 @@
     }
     .score > p {
         font-size: large;
+    }
+
+    .score > p:nth-child(odd) {
+        font-size: small;
     }
 }
 
