@@ -59,18 +59,20 @@ const App = () => {
 
     return (
       <section className="App">
-        <BoardHeader 
-          xIsNext={xIsNext} 
-          winner={winner}
-          restartGame={restartGame}
-        />
-        <Board 
-          handleClick={handleClick} 
-          board={board}
-        />
-        <Score 
-          winner={winner}
-        />
+        <section className="game-container">
+          <BoardHeader 
+            xIsNext={xIsNext} 
+            winner={winner}
+            restartGame={restartGame}
+            />
+          <Board 
+            handleClick={handleClick} 
+            board={board}
+            />
+          <Score 
+            winner={winner}
+            />
+        </section>
       </section>
     );
 }
