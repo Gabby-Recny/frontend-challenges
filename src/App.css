@@ -13,6 +13,12 @@
   width: 330px;
 }
 
+@media (max-width: 768px) {
+  .game-container {
+      width: 297px;
+  }
+}
+
 @media (min-height: 1024px) {
   .App {
     height: 75vh;

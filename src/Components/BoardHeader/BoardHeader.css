@@ -67,11 +67,6 @@
 }
 
 @media (max-width: 768px) {
-    .board-header {
-        width: 270px;
-        margin: 2% auto;
-    }
-
     .status {
         width: 88px;
     }
