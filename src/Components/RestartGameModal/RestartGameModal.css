@@ -24,9 +24,9 @@ h3 {
 
 .restart-game-modal-btn-container > button:last-child {
     background-color: #31C3BD;
-    -webkit-box-shadow: 0px 8px 0px 0px #196a67;
-    -moz-box-shadow: 0px 8px 0px 0px #196a67;
-    box-shadow: 0px 8px 0px 0px #196a67;
+    -webkit-box-shadow: 0px 4px 0px 0px #196a67;
+    -moz-box-shadow: 0px 4px 0px 0px #196a67;
+    box-shadow: 0px 4px 0px 0px #196a67;
 }
 
 .restart-game-modal-btn-container > button {
@@ -38,9 +38,9 @@ h3 {
     font-weight: bolder;
     transition: all .2s ease-in-out;
     background-color: #F2B137;
-    -webkit-box-shadow: 0px 8px 0px 0px #986f21;
-    -moz-box-shadow: 0px 8px 0px 0px #986f21;
-    box-shadow: 0px 8px 0px 0px #986f21;
+    -webkit-box-shadow: 0px 4px 0px 0px #986f21;
+    -moz-box-shadow: 0px 4px 0px 0px #986f21;
+    box-shadow: 0px 4px 0px 0px #986f21;
 }
 
 .restart-game-modal-btn-container > button:hover {
