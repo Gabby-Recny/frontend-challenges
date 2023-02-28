@@ -19,9 +19,15 @@
   }
 }
 
-@media (min-height: 1024px) {
-  .App {
-    height: 75vh;
+@media only screen and (min-width: 992px) {
+  .game-container {
+    width: calc(480px + 2em)
+  }
+}
+
+@media only screen and (min-height: 1024px) {
+  .game-container {
+    width: auto;
   }
 }
 

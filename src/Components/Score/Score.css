@@ -45,12 +45,7 @@
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .score-container {
-        width: 500px;
-        grid-gap: 10px;
-    }
-
+@media (min-width: 992px) {
     .score {
         width: 160px;
         height: 60px;
@@ -62,11 +57,6 @@
 
 /* For tablet height */
 @media (min-height: 1024px) {
-    .score-container {
-            width: 500px;
-            grid-gap: 10px;
-        }
-    
         .score {
             width: 160px;
             height: 60px;
