@@ -27,24 +27,24 @@
     border-radius: 10px;
 }
 
-.icon-wrapper {
+.icon-choice-btn {
     display: flex;
     justify-content: center;
+    border: none;
+    box-shadow: none;
+    background-color: #192934;
+    border-radius: 10px;
+    width: 50%;
+    transition: all .2s ease-in-out;
 }
 
-.icon-wrapper > img {
+.icon-choice-btn > img {
     width: 12%;
     padding: 11px 8px;
 }
 
-.icon-wrapper:last-child {
+.icon-choice-btn:last-child {
     background-color: #A8BFC9;
-    width: 50%;
-    border-radius: 10px;
-}
-
-.icon-wrapper:first-child {
-    width: 50%;
 }
 
 .player-choice-container {
@@ -94,7 +94,8 @@
     text-transform: uppercase;
 }
 
-.new-game-modal>button:hover {
+.new-game-modal>button:hover,
+.icon-choice-btn:hover {
     transform: scale(1.05);
     cursor: pointer;
 }

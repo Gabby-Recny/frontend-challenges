@@ -15,12 +15,12 @@ const NewGame = () => {
             <div className="player-choice-container">
                 <p>Pick Player 1's Mark</p>
                 <div className="icon-choice-container">
-                    <div className="icon-wrapper">
+                    <button className="icon-choice-btn">
                         <img src={xOutline}/>
-                    </div>
-                    <div className="icon-wrapper">
+                    </button>
+                    <button className="icon-choice-btn">
                         <img src={oOutline}/>
-                    </div>
+                    </button>
                 </div>        
                 <p>Remember: X Goes First</p>
             </div>
