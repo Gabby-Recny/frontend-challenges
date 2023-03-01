@@ -1,0 +1,100 @@
+.new-game-modal {
+    width: 57vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-game-icon-container,
+.player-choice-container,
+.new-game-modal > button:first-child {
+    margin: 6% 0;
+}
+
+.new-game-icon-container > img {
+    width: 7%;
+}
+
+.icon-choice-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #192A33;
+    border-radius: 10px;
+}
+
+.icon-choice-container > img:last-child {
+    fill: #0b1519;
+    border-radius: 10px;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-wrapper > img {
+    width: 12%;
+    padding: 11px 8px;
+}
+
+.icon-wrapper:last-child {
+    background-color: #A8BFC9;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.icon-wrapper:first-child {
+    width: 50%;
+}
+
+.player-choice-container {
+    background-color: #1F3540;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 6px 0px 0px #0f1d23;
+    -moz-box-shadow: 0px 6px 0px 0px #0b1519;
+    box-shadow: 0px 6px 0px 0px #0b1519;
+}
+
+.player-choice-container > p:first-child {
+    color: #A8BFC9;
+}
+
+.player-choice-container > p:last-child {
+    color: #50626C;
+    font-size: small;
+}
+
+.player-choice-container > p {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.new-game-modal > button:last-child {
+    background-color: #31C3BD;
+    -webkit-box-shadow: 0px 4px 0px 0px #196a67;
+    -moz-box-shadow: 0px 4px 0px 0px #196a67;
+    box-shadow: 0px 4px 0px 0px #196a67;
+    margin: 14px 0;
+}
+
+.new-game-modal > button {
+    border: none;
+    width: 100%;
+    padding: 4% 0;
+    margin: 0 auto;
+    border-radius: 8px;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+    background-color: #F2B137;
+    -webkit-box-shadow: 0px 4px 0px 0px #986f21;
+    -moz-box-shadow: 0px 4px 0px 0px #986f21;
+    box-shadow: 0px 4px 0px 0px #986f21;
+    text-transform: uppercase;
+}
+
+.new-game-modal>button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
