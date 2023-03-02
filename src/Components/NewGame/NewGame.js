@@ -30,7 +30,7 @@ const NewGame = () => {
                 </div>        
                 <p>Remember: X Goes First</p>
             </div>
-            <button>New Game</button>
+            <button>Start Game</button>
             <button>Quit Game</button>
         </section>
     )
