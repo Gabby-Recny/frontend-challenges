@@ -9,22 +9,6 @@
   width: 100vw;
 }
 
-.game-container {
-  width: 330px;
-}
-
-@media (min-width: 992px) {
-  .game-container {
-    width: calc(480px + 2em)
-  }
-}
-
-@media (min-height: 1024px) {
-  .game-container {
-    width: auto;
-  }
-}
-
 @keyframes pulsate-bwd {
   0% {
     transform: scale(1)
