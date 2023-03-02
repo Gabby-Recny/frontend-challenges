@@ -61,6 +61,7 @@
     width: 15%;
     height: auto;
     margin: 0 6px;
+    filter: invert(84%) sepia(15%) saturate(313%) hue-rotate(153deg) brightness(90%) contrast(85%);
 }
 
 .status > p {
