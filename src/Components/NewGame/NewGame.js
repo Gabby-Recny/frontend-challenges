@@ -9,18 +9,24 @@ const NewGame = () => {
     return (
         <section className="new-game-modal">
             <div className="new-game-icon-container">
-                <img src={X} alt="X token"/>
-                <img src={O} alt="O token"/>
+                <img src={X} alt="X token for display purposes"/>
+                <img src={O} alt="O token for display purposes"/>
             </div>
             <div className="player-choice-container">
                 <p>Pick Player 1's Mark</p>
                 <div className="icon-choice-container">
-                    <button className="icon-choice-btn">
-                        <img src={xOutline}/>
-                    </button>
-                    <button className="icon-choice-btn">
-                        <img src={oOutline}/>
-                    </button>
+                    <label>
+                        <input type="radio" name="radio" />
+                        <div>
+                            <img src={xOutline} alt="Choose the x token"/>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="radio"/>
+                        <div>
+                            <img src={oOutline} alt="Choose the o token"/>
+                        </div>
+                    </label>
                 </div>        
                 <p>Remember: X Goes First</p>
             </div>

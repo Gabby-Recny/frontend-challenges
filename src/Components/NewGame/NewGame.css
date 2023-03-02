@@ -10,6 +10,41 @@
     margin: 6% 0;
 }
 
+.icon-choice-container > label {
+    display: flex;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+    background-color: #192934;
+    border-radius: 10px;
+    width: 50%;
+    padding: 7px 0;
+    transition: all .2s ease-in-out;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 7%;
+    height: 7%;
+}
+
+.icon-choice-container > label > [type=radio]:checked + div {
+    background-color: #A8BFC9;
+    border-radius: 8px;
+    width: 95%;
+}
+
+.icon-choice-container>label>[type=radio]:checked+div > img {
+    filter: invert(12%) sepia(11%) saturate(2259%) hue-rotate(162deg) brightness(94%) contrast(90%);
+}
+
+.icon-choice-container>label > div > img {
+    filter: invert(100%) sepia(94%) saturate(1025%) hue-rotate(171deg) brightness(80%) contrast(97%);
+    height: 22px;
+    padding: 8px 2px;
+}
+
 .new-game-icon-container > img {
     width: 7%;
 }
@@ -20,31 +55,6 @@
     align-items: center;
     background-color: #192A33;
     border-radius: 10px;
-}
-
-.icon-choice-container > img:last-child {
-    fill: #0b1519;
-    border-radius: 10px;
-}
-
-.icon-choice-btn {
-    display: flex;
-    justify-content: center;
-    border: none;
-    box-shadow: none;
-    background-color: #192934;
-    border-radius: 10px;
-    width: 50%;
-    transition: all .2s ease-in-out;
-}
-
-.icon-choice-btn > img {
-    width: 12%;
-    padding: 11px 8px;
-}
-
-.icon-choice-btn:last-child {
-    background-color: #A8BFC9;
 }
 
 .player-choice-container {
@@ -95,7 +105,7 @@
 }
 
 .new-game-modal>button:hover,
-.icon-choice-btn:hover {
+.icon-choice-container>label:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
