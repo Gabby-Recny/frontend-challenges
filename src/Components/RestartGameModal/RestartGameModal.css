@@ -22,14 +22,7 @@ h3 {
     padding: 0 12px;
 }
 
-.restart-game-modal-btn-container > button:last-child {
-    background-color: #31C3BD;
-    -webkit-box-shadow: 0px 4px 0px 0px #196a67;
-    -moz-box-shadow: 0px 4px 0px 0px #196a67;
-    box-shadow: 0px 4px 0px 0px #196a67;
-}
-
-.restart-game-modal-btn-container > button {
+.restart-modal-btn {
     border: none;
     width: 30em;
     padding: 5% 0;
@@ -37,13 +30,24 @@ h3 {
     border-radius: 8px;
     font-weight: bolder;
     transition: all .2s ease-in-out;
+}
+
+.restart-modal-btn:last-child {
+    background-color: #31C3BD;
+    -webkit-box-shadow: 0px 4px 0px 0px #196a67;
+    -moz-box-shadow: 0px 4px 0px 0px #196a67;
+    box-shadow: 0px 4px 0px 0px #196a67;
+}
+
+.restart-modal-btn:first-child {
     background-color: #F2B137;
     -webkit-box-shadow: 0px 4px 0px 0px #986f21;
     -moz-box-shadow: 0px 4px 0px 0px #986f21;
     box-shadow: 0px 4px 0px 0px #986f21;
 }
 
-.restart-game-modal-btn-container > button:hover {
+
+.restart-modal-btn:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -61,7 +65,7 @@ h3 {
 }
 
 @media (max-width: 768px) {
-    .restart-game-modal-btn-container>button {
+    .restart-modal-btn {
         width: 15em;
     }
 }
@@ -75,7 +79,7 @@ h3 {
         font-size: x-large;
     }
 
-    .restart-game-modal-btn-container>button {
+    .restart-modal-btn {
         font-size: medium;
     }
 
@@ -95,7 +99,7 @@ h3 {
                 font-size: x-large;
             }
         
-            .restart-game-modal-btn-container>button {
+            .restart-modal-btn {
                 font-size: medium;
             }
         
