@@ -11,7 +11,7 @@ const RestartGameModal = ({isModalOpen, closeModal, restartGame}) => {
     }
 
     const handleClick = () => {
-        // restartGame()
+        restartGame()
         closeModal()
     }
 
