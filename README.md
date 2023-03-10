@@ -1,38 +1,55 @@
-# October Frontend Challenge - Tic Tac Toe
+# Tic Tac Toe
 
-![Design preview for the Tic Tac Toe coding challenge](./preview.jpg)
+## TABLE OF CONTENTS
+- [Project Overview](#project-overview)
+- [Future Features](#future-features)
+- [Tech Stack](#technologies-used)
+- [Install Instructions](#instructions)
+- [Authors/Links](#authorslinks)
 
-## Getting Started
-- Fork this repository
-- In your fork, create a new branch called `october-challenge`
-- Do your work in this branch and create a PR to _your_ master branch
-- Send me the PR link
+![The game in action where you can see the scores being kept and alternating turns](https://user-images.githubusercontent.com/84749512/224419714-534a31f2-52d3-4899-aefa-b5a8866c1db7.png)
 
-## The challenge
+## ABSTRACT (WHAT, HOW, WHY)
+My rendition of Tic Tac Toe was prompted by a challenge posed by my team lead to build upon our React.Js knowledge. The application features a fully responsive and interactive interface styled with CSS and utilizes local storage to store score information. When entering the application, the players are brought to a landing page where they can choose their tokens. When starting the game, the players alternate are brought to a new page using React Router where they beging to play the game. The players take turns and choose the space they wish to fill with their game token. When a game is won or if there is a draw, the game status changes and the scores are tracked until the players choose 'Quit Game' when the scores are cleared. The players are also equipped to restart the game at any point.
 
-Your challenge is to build out this Tic Tac Toe game and get it looking as close to the design as possible. Since it's October, feel free to add additional themes to the board and show off your creativity!
+![Photo of the landing page where a player chooses their token](https://user-images.githubusercontent.com/84749512/224419586-d6a976b9-b002-4890-a9b5-adf14900c0a9.png)
 
-For this challenge, I would like you to use React to build out the funtionality. I've included the Create React App scaffolding in this repo. To learn how to start/stop/build, read the CRA-README.md instructions.
+## FUTURE FEATURES
+- Accessibility Check
+- Cypress Testing
+- Saving game state in local storage
+- Animations to declare the winning game
 
-Your users should be able to:
+## TECHNOLOGIES USED 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-- View the optimal layout for the game depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Play the game either solo (for now)
-- **Bonus 1**: Save the game state in the browser so that it’s preserved if the player refreshes their browser
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white)
 
-### Expected behaviour
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
-- For the start screen, you can omit the New Game (vs CPU.)
-- On the new game screen, whichever mark isn't selected for the first player is automatically assigned to the second player when the game is started.
-- The first turn of the first round is always played by whoever is playing as X. For every following round, the first turn alternates between O and X.
-- After a round, if the player chooses to quit the game, they should be taken back to the new game menu.
-- If the restart icon in the top right is clicked, the "Restart game?" modal should show and allow the player to reset the game or cancel and continue to play.
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-## Where to find everything
+## INSTRUCTIONS
+- fork the repository
+- copy the SSH clone address
+- run ```git clone [remote-address]``` in your repo
+- run ```npm install``` in your terminal
+- run ```npm start``` in the Terminal visit localhost:8080
 
-Your task is to build out the project to the design file provided. You can find the .fig file in the `design` folder. The design download also comes with a `README.md` file as well to help you get set up.
+- now fork and clone the APIs from: 
+- run ```npm install``` in your terminal
+- run ```npm start``` in the Terminal
 
-All the required assets for this project are in the `/public/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes. So if you don't see an image in a specific folder, it will typically be in another folder for that page.
+## AUTHORS/LINKS
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project. Our fonts always come from [Google Fonts](https://fonts.google.com/).
+#### - AUTHORS:
+- Gabby Recny = [LinkedIn](https://www.linkedin.com/in/gabbyrecny/) || [GitHub](https://github.com/Gabby-Recny)
